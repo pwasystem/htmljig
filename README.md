@@ -14,6 +14,7 @@
 > GEMINIKEY=(youy gemini api key)
 
 - Modify **.firebaserc** with your project name.
+- Modify action in public/jig.html to **action='http://127.0.0.1:5001/(your_project_name)/us-central1/htmljig'**.
 - Run **firebase emulators:start**.
 - Access your localhost domain at **http://127.0.0.1:5000/jig.html**.
 - Fill in the form fields:
