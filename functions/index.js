@@ -32,7 +32,7 @@ exports.jig = onRequest(async  (req, res) => {
 	let message = 'Aways return only a HTML code without explanaiton.\nUse the HTML template below '+(data.images!=''?'and this image list: '+data.images+' ;':'')+' to create a website for your company:\n'+data.title+', '+data.description+'.\nYou must create all the texts and find images relevant to the topic, create an hmtl and just provide the code.\n\n```html\n'+html+'\n```';
 	let code = await getGemini(message);
 	data.hash = hash(data.file)
-	fs.writeFile(`../public/${data.hash}.html`, code.replace('´´´html','').replace('´´´',''), function (err) {
+	fs.writeFile(`../public/${data.hash}.html`, code.replace('´´´html','').replace('```',''), function (err) {
 		if (err) throw err;
 		logger.info({"status":`${data.hash}.html has created!`}, {structuredData: true});
 	});
