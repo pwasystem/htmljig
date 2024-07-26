@@ -4,6 +4,10 @@
 ### How to
 
 - Clone this repository.
+
+> git clone https://github.com/pwasystem/htmljig.git
+
+
 - Make **npm install** on *functions* directory.
 - Change .env fire in functions folder with text:
 
