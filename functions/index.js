@@ -25,7 +25,7 @@ const generationConfig = {
 };
 
 //request
-exports.htmljig = onRequest(async  (req, res) => {
+exports.jig = onRequest(async  (req, res) => {
 	data = JSON.parse(req.body);
 	logger.info({"status":"htmlJig Start!","data":data}, {structuredData: true});	
 	let html = await getTemplate(data.template);
