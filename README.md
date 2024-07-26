@@ -23,7 +23,7 @@
 
 
 5. Modify the action value in the form of the file available at public/jig.html to:
->     action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/htmljig'.
+>     action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/jig'.
 
 6. install the script dependencies in the functions directory.
 >     npm install
