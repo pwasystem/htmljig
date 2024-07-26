@@ -1,14 +1,13 @@
 # HTML JIG
 ## Create your website with AI
 
-### How to
+### How to:
+1. Clone this repository.
+>     git clone https://github.com/pwasystem/htmljig.git
 
-- Clone this repository.
-> git clone https://github.com/pwasystem/htmljig.git
-
-- Rename the HTMLjig folder to your Firebase project name.
-
-- Modify the contents of the **.firebaserc** file with your project name.
+2. Rename the HTMLjig folder to your Firebase project name.
+  
+3. Modify the contents of the **.firebaserc** file with your project name.
 >     {
 > 
 >       "projects": {
@@ -19,21 +18,22 @@
 > 
 >     }
 
-- Change .env fire in functions folder with text:
-> GEMINIKEY=<b>(youy gemini api key)</b>
+4. Change .env fire in functions folder with text:
+>     GEMINIKEY=<b>(youy gemini api key)</b>
 
 
-- Modify the action value in the form of the file available at public/jig.html to:
-> action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/htmljig'.
+5. Modify the action value in the form of the file available at public/jig.html to:
+>     action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/htmljig'.
 
-- Make **npm install** on *functions* directory.
+6. install the script dependencies in the functions directory.
+>     npm install
 
-- Run **firebase emulators:start**.
-- 
-- Access your localhost domain at **http://127.0.0.1:5000/jig.html**.
+7. Start Firebase emulator:
+>     firebase emulators:start
 
+8. Access your localhost domain at **http://127.0.0.1:5000/jig.html**.
 
-- Fill in the form fields:
+9. Fill in the form fields:
 
 > **File name**: name for the .html file.
 > 
@@ -45,9 +45,9 @@
 > 
 > **Images**: send some image links.
 
-- Click to create your website and wait.
+10. Click to create your website and wait.
 
-- View your creation.
+11. Click on the link and see your creation.
 
-- Suggest changes to your site through the description field or publish your site:
-> **firebase deploy --only hosting**.
+12. Suggest changes to your site through the description field or publish your site:
+>     **firebase deploy --only hosting**.
