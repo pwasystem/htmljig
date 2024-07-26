@@ -5,10 +5,11 @@
 
 - Clone this repository.
 - Make **npm install** on *functions* directory.
-- Create a .env fire in functions folder with text:
+- Change .env fire in functions folder with text:
 
 > GEMINIKEY=(youy gemini api key)
 
+- Modify **.firebaserc** with your project name.
 - Run **firebase emulators:start**.
 - Access your localhost domain at **http://127.0.0.1:5000/jig.html**.
 - Fill in the form fields:
