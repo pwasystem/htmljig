@@ -1,6 +1,14 @@
 # HTML JIG
 ## Create your website with AI
 
+### What do you need to know
+
+This project was made to work with Google Firebase.
+
+You need to have Node JS and Firebase Tools installed on your local hardware. This can be a computer, tablet or smartphone.
+
+Remember to create a project with a web application and log in to Firebase Tools before performing the procedures below.
+
 ### How to:
 1. Clone this repository.
 >     git clone https://github.com/pwasystem/htmljig.git
@@ -19,11 +27,11 @@
 >     }
 
 4. Change .env fire in functions folder with text:
->     GEMINIKEY=<b>(youy gemini api key)</b>
+>     GEMINIKEY=(youy gemini api key)
 
 
 5. Modify the action value in the form of the file available at public/jig.html to:
->     action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/jig'.
+>     action='http://127.0.0.1:5001/(your_project_name)/us-central1/jig'.
 
 6. install the script dependencies in the functions directory.
 >     npm install
