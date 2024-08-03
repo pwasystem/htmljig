@@ -1,6 +1,8 @@
 # HTML JIG
 ## Create your website with AI
 
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/uD-li67fNmg/0.jpg)](https://www.youtube.com/watch?v=uD-li67fNmg "Video Title")
+
 ### What do you need to know
 
 This project was made to work with Google Firebase.
@@ -9,7 +11,22 @@ You need to have Node JS and Firebase Tools installed on your local hardware. Th
 
 Remember to create a project with a web application and log in to Firebase Tools before performing the procedures below.
 
-### How to:
+### If you're new to Google Firebase, start here:
+
+1. Install NodeJS from
+>		https://nodejs.org/en/download/
+
+2. Install Google Firebase Tools
+>		npm install -g firebase-tools
+
+3. Log in
+>		firebase login
+
+4. Create a Firebase project
+>		firebase init
+
+### Or start here:
+
 1. Clone this repository.
 >     git clone https://github.com/pwasystem/htmljig.git
 
