@@ -1,25 +1,21 @@
 {
   "name": "htmljig",
-  "version": "2.0.0",
-  "description": "HTML Jig - Gerador de páginas HTML com Node.js e IA da NVIDIA",
+  "version": "3.0.0",
+  "description": "HTML Jig - Gerador autônomo de páginas HTML com 100% Node.js nativo (0 dependências) e IA da NVIDIA",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "openai": "^4.55.0"
-  },
+  "dependencies": {},
   "keywords": [
     "html",
     "generator",
     "nvidia",
     "ai",
     "nodejs",
-    "express"
+    "native",
+    "zero-dependencies"
   ],
   "author": "",
   "license": "ISC"

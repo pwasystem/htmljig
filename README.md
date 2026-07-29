@@ -1,31 +1,31 @@
 # HTML JIG ⚡
-## Gerador de Sites com Inteligência Artificial (Node.js + NVIDIA AI)
+## Gerador de Sites com Inteligência Artificial (Node.js 100% Nativo - 0 Dependências NPM)
 
 [![HTML Jig Video](https://img.youtube.com/vi/uD-li67fNmg/0.jpg)](https://www.youtube.com/watch?v=uD-li67fNmg "Vídeo Demonstrativo do HTML Jig")
 
-O **HTML Jig** é um gerador autônomo de páginas web desenvolvido em **Node.js** e **Express**, integrado aos servidores de Inteligência Artificial gratuitos da **NVIDIA** ([build.nvidia.com](https://build.nvidia.com)).
+O **HTML Jig** é um gerador de páginas web autônomo e ultrarrápido desenvolvido utilizando **100% de recursos nativos do Node.js** (`http`, `fs`, `path`, `fetch`), sem necessidade de instalar nenhuma biblioteca externa (0 dependências no `package.json`).
 
-Ele permite criar sites completos, responsivos e estilizados em poucos segundos a partir de simples descrições em texto e escolha de modelos visuais.
+Conectado gratuitamente à API de IA da **NVIDIA** ([build.nvidia.com](https://build.nvidia.com)), ele gera sites profissionais completos a partir de uma simples descrição de texto.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Destaques da Arquitetura Nativa
 
-- **100% Node.js & Express:** Funciona sem dependência do Google Firebase ou serviços pagos em nuvem.
-- **Inteligência Artificial NVIDIA:** Conectado à API oficial de LLMs da NVIDIA (`https://integrate.api.nvidia.com/v1`) utilizando o modelo `meta/llama-3.1-8b-instruct` (ou outros modelos compatíveis).
-- **Organização Automática:** Todas as novas páginas geradas são salvas automaticamente na pasta **`public/criacoes/`**.
-- **Interface Web Interativa:** Formulário intuitivo para preenchimento de informações e escolha de templates W3.CSS.
+- **Zero Dependências NPM:** Não necessita de Express, Cors, Dotenv ou SDKs de terceiros. Roda nativamente com os módulos da biblioteca padrão do Node.js.
+- **Fetch API Nativo:** Conecta-se diretamente aos servidores de IA da NVIDIA (`https://integrate.api.nvidia.com/v1`) através da `fetch` API nativa do Node.js.
+- **Organização Automática:** Salva todas as novas páginas geradas dentro do diretório **`public/criacoes/`**.
+- **Servidor Estático Integrado:** Serve arquivos HTML, CSS, JavaScript e mídias diretamente da pasta `public/`.
 
 ---
 
 ## 📋 Pré-requisitos
 
-1. **Node.js** (versão 18 ou superior): [Baixar Node.js](https://nodejs.org/pt-br/download/)
-2. **Chave de API Gratuita da NVIDIA:** Obtenha gratuitamente em [build.nvidia.com](https://build.nvidia.com)
+1. **Node.js** (v18 ou superior): [Baixar Node.js](https://nodejs.org/pt-br/download/)
+2. **Chave de API Gratuita da NVIDIA:** Obtenha em [build.nvidia.com](https://build.nvidia.com)
 
 ---
 
-## 🛠️ Passo a Passo de Instalação e Execução
+## 🛠️ Instalação e Execução
 
 1. **Clonar o Repositório:**
    ```bash
@@ -33,13 +33,8 @@ Ele permite criar sites completos, responsivos e estilizados em poucos segundos 
    cd htmljig
    ```
 
-2. **Instalar as Dependências:**
-   ```bash
-   npm install
-   ```
-
-3. **Configurar as Variáveis de Ambiente (`.env`):**
-   Crie ou edite o arquivo `.env` na raiz do projeto:
+2. **Configurar o Arquivo `.env`:**
+   Crie ou edite o arquivo `.env` na raiz do projeto com sua chave:
    ```env
    PORT=3000
    NVIDIA_API_KEY=sua_chave_nvidia_aqui
@@ -48,48 +43,28 @@ Ele permite criar sites completos, responsivos e estilizados em poucos segundos 
    MAX_TOKENS=4096
    ```
 
-4. **Iniciar o Servidor:**
+3. **Iniciar o Servidor Nativo (sem precisar dar `npm install`!):**
    ```bash
    npm start
+   # ou
+   node server.js
    ```
 
-5. **Acessar o Sistema:**
-   - **Página Inicial & Instruções:** [http://localhost:3000](http://localhost:3000)
-   - **Formulário de Criação (Jig):** [http://localhost:3000/jig.html](http://localhost:3000/jig.html)
+4. **Acessar o Sistema:**
+   - **Página Inicial:** [http://localhost:3000](http://localhost:3000)
+   - **Formulário de Criação:** [http://localhost:3000/jig.html](http://localhost:3000/jig.html)
 
 ---
 
-## 💡 Como Utilizar o HTML Jig
+## 💡 Como Usar
 
-1. Abra a aplicação em `http://localhost:3000/jig.html`.
-2. Preencha os campos solicitados:
-   - **Nome do Arquivo (File Name):** O nome identificador para a página (ex: `minha-empresa`).
-   - **Título (Title):** O nome da sua marca, empresa ou projeto.
-   - **Descrição (Description):** Descreva os produtos, serviços, cores preferidas e seções desejadas.
-   - **Template:** Selecione a estrutura base desejada (ex: *Website, Cafe, Band, Portfólio*, etc.).
-   - **Imagens (opcional):** Adicione URLs de fotos para serem incluídas no layout.
-3. Clique em **Criar** e aguarde a inteligência artificial gerar seu site.
-4. Clique no link gerado para visualizar seu novo site diretamente na pasta de criações (`http://localhost:3000/criacoes/nome-do-arquivo.html`).
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-htmljig/
-├── public/                # Arquivos estáticos da interface web
-│   ├── criacoes/          # Pasta onde as páginas geradas são salvas
-│   ├── index.html         # Página inicial e instruções
-│   ├── jig.html           # Formulário de geração com a IA
-│   └── ...
-├── server.js              # Servidor Express & Integração com NVIDIA AI
-├── package.json           # Dependências do Node.js
-├── .env                   # Variáveis de ambiente (Chave NVIDIA, porta, etc.)
-└── README.md              # Documentação do projeto
-```
+1. Abra [http://localhost:3000/jig.html](http://localhost:3000/jig.html).
+2. Informe o **Nome do Arquivo**, **Título**, **Descrição** do seu projeto e selecione um **Template**.
+3. Clique em **Criar** e aguarde a IA construir seu site.
+4. Clique no link para visualizar sua página gerada na pasta de criações (`http://localhost:3000/criacoes/nome-do-arquivo.html`).
 
 ---
 
 ## 📄 Licença
 
-Este projeto é disponibilizado sob a licença ISC. Desenvolvido por PWA System.
+Desenvolvido por PWA System sob a licença ISC.
