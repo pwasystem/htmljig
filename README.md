@@ -1,78 +1,95 @@
-# HTML JIG
-## Create your website with AI
+# HTML JIG ⚡
+## Gerador de Sites com Inteligência Artificial (Node.js + NVIDIA AI)
 
-[![IMAGE ALT TEXT](https://img.youtube.com/vi/uD-li67fNmg/0.jpg)](https://www.youtube.com/watch?v=uD-li67fNmg "Video Title")
+[![HTML Jig Video](https://img.youtube.com/vi/uD-li67fNmg/0.jpg)](https://www.youtube.com/watch?v=uD-li67fNmg "Vídeo Demonstrativo do HTML Jig")
 
-### What do you need to know
+O **HTML Jig** é um gerador autônomo de páginas web desenvolvido em **Node.js** e **Express**, integrado aos servidores de Inteligência Artificial gratuitos da **NVIDIA** ([build.nvidia.com](https://build.nvidia.com)).
 
-This project was made to work with Google Firebase.
+Ele permite criar sites completos, responsivos e estilizados em poucos segundos a partir de simples descrições em texto e escolha de modelos visuais.
 
-You need to have Node JS and Firebase Tools installed on your local hardware. This can be a computer, tablet or smartphone.
+---
 
-Remember to create a project with a web application and log in to Firebase Tools before performing the procedures below.
+## 🚀 Funcionalidades
 
-### If you're new to Google Firebase, start here:
+- **100% Node.js & Express:** Funciona sem dependência do Google Firebase ou serviços pagos em nuvem.
+- **Inteligência Artificial NVIDIA:** Conectado à API oficial de LLMs da NVIDIA (`https://integrate.api.nvidia.com/v1`) utilizando o modelo `meta/llama-3.1-8b-instruct` (ou outros modelos compatíveis).
+- **Organização Automática:** Todas as novas páginas geradas são salvas automaticamente na pasta **`public/criacoes/`**.
+- **Interface Web Interativa:** Formulário intuitivo para preenchimento de informações e escolha de templates W3.CSS.
 
-1. Install NodeJS from
->		https://nodejs.org/en/download/
+---
 
-2. Install Google Firebase Tools
->		npm install -g firebase-tools
+## 📋 Pré-requisitos
 
-3. Log in
->		firebase login
+1. **Node.js** (versão 18 ou superior): [Baixar Node.js](https://nodejs.org/pt-br/download/)
+2. **Chave de API Gratuita da NVIDIA:** Obtenha gratuitamente em [build.nvidia.com](https://build.nvidia.com)
 
-4. Create a Firebase project
->		firebase init
+---
 
-### Or start here:
+## 🛠️ Passo a Passo de Instalação e Execução
 
-1. Clone this repository.
->     git clone https://github.com/pwasystem/htmljig.git
+1. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/pwasystem/htmljig.git
+   cd htmljig
+   ```
 
-2. Rename the HTMLjig folder to your Firebase project name.
-  
-3. Modify the contents of the **.firebaserc** file with your project name.
->     {
-> 
->       "projects": {
-> 
->         "default": "your_project_name"
-> 
->       }
-> 
->     }
+2. **Instalar as Dependências:**
+   ```bash
+   npm install
+   ```
 
-4. Change .env fire in functions folder with text:
->     GEMINIKEY=(youy gemini api key)
+3. **Configurar as Variáveis de Ambiente (`.env`):**
+   Crie ou edite o arquivo `.env` na raiz do projeto:
+   ```env
+   PORT=3000
+   NVIDIA_API_KEY=sua_chave_nvidia_aqui
+   NVIDIA_BASE_URL=https://integrate.api.nvidia.com/v1
+   NVIDIA_MODEL=meta/llama-3.1-8b-instruct
+   MAX_TOKENS=4096
+   ```
 
+4. **Iniciar o Servidor:**
+   ```bash
+   npm start
+   ```
 
-5. Modify the action value in the form of the file available at public/jig.html to:
->     action='http://127.0.0.1:5001/(your_project_name)/us-central1/jig'.
+5. **Acessar o Sistema:**
+   - **Página Inicial & Instruções:** [http://localhost:3000](http://localhost:3000)
+   - **Formulário de Criação (Jig):** [http://localhost:3000/jig.html](http://localhost:3000/jig.html)
 
-6. install the script dependencies in the functions directory.
->     npm install
+---
 
-7. Start Firebase emulator:
->     firebase emulators:start
+## 💡 Como Utilizar o HTML Jig
 
-8. Access your localhost domain at **http://127.0.0.1:5000/jig.html**.
+1. Abra a aplicação em `http://localhost:3000/jig.html`.
+2. Preencha os campos solicitados:
+   - **Nome do Arquivo (File Name):** O nome identificador para a página (ex: `minha-empresa`).
+   - **Título (Title):** O nome da sua marca, empresa ou projeto.
+   - **Descrição (Description):** Descreva os produtos, serviços, cores preferidas e seções desejadas.
+   - **Template:** Selecione a estrutura base desejada (ex: *Website, Cafe, Band, Portfólio*, etc.).
+   - **Imagens (opcional):** Adicione URLs de fotos para serem incluídas no layout.
+3. Clique em **Criar** e aguarde a inteligência artificial gerar seu site.
+4. Clique no link gerado para visualizar seu novo site diretamente na pasta de criações (`http://localhost:3000/criacoes/nome-do-arquivo.html`).
 
-9. Fill in the form fields:
+---
 
-> **File name**: name for the .html file.
-> 
-> **Title**: name of your company or page title.
-> 
-> **Description**: information about your company and suggestions for colors and topics for the site.
-> 
-> **Template**: Select a model to be used as a template.
-> 
-> **Images**: send some image links.
+## 📂 Estrutura do Projeto
 
-10. Click to create your website and wait.
+```
+htmljig/
+├── public/                # Arquivos estáticos da interface web
+│   ├── criacoes/          # Pasta onde as páginas geradas são salvas
+│   ├── index.html         # Página inicial e instruções
+│   ├── jig.html           # Formulário de geração com a IA
+│   └── ...
+├── server.js              # Servidor Express & Integração com NVIDIA AI
+├── package.json           # Dependências do Node.js
+├── .env                   # Variáveis de ambiente (Chave NVIDIA, porta, etc.)
+└── README.md              # Documentação do projeto
+```
 
-11. Click on the link and see your creation.
+---
 
-12. Suggest changes to your site through the description field or publish your site:
->     **firebase deploy --only hosting**.
+## 📄 Licença
+
+Este projeto é disponibilizado sob a licença ISC. Desenvolvido por PWA System.

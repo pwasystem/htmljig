@@ -32,10 +32,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-remove"></i>
   </a>
   <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-    <a href="#getstarted" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Get Started</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Início</a>
+    <a href="jig.html" class="w3-bar-item w3-button w3-text-purple w3-hover-white" onclick="closeNav()"><b><i class="fa fa-magic"></i> Criar Site (Jig)</b></a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Sobre</a>
+    <a href="#instructions" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Como Usar</a>
+    <a href="#getstarted" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Servidor</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contato</a>
   </div>
 </nav>
 
@@ -48,107 +50,89 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
     <h1 class="w3-jumbo"><b>HTML Jig</b></h1>
-    <p>Create your website with AI in minutes.</p>
+    <p class="w3-large">Crie seu site profissional com Inteligência Artificial em segundos.</p>
+    <p style="margin-top: 24px;">
+      <a href="jig.html" class="w3-button w3-deep-purple w3-round-large w3-large w3-padding-large w3-hover-purple"><i class="fa fa-magic"></i> Criar Site Agora no HTML Jig</a>
+    </p>
     <img src="bar.webp" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="bar.webp" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About HTML Jig</h2>
+    <h2>Sobre o HTML Jig</h2>
     <hr class="w3-opacity">
-    <p>HTML Jig is your AI-powered website builder that empowers you to create stunning, professional websites in a matter of minutes. No coding knowledge required! Simply describe your vision, choose a template, and let our intelligent system do the rest. </p>
-    <h3 class="w3-padding-16">Why choose HTML Jig?</h3>
+    <p>O HTML Jig é um gerador de sites movido a Inteligência Artificial (utilizando os servidores de IA da NVIDIA). Sem necessidade de código, basta descrever sua ideia, escolher um modelo de template e o sistema gerará uma página HTML completa e pronta para uso!</p>
+    
+    <div class="w3-center w3-padding-16">
+      <a href="jig.html" class="w3-button w3-black w3-round w3-large"><i class="fa fa-rocket"></i> Acessar a Ferramenta HTML Jig</a>
+    </div>
 
-	<p class="w3-center">
-		<iframe style="aspect-ratio: 16/9;max-width:720 px;min-width:300px;width:100%" width="720" src="https://www.youtube.com/embed/uD-li67fNmg?si=RzhCHQpHkjMpj85p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</p>
-
-
-
-
+    <h3 class="w3-padding-16">Por que utilizar o HTML Jig?</h3>
     <ul>
-      <li>Effortless Website Creation: Say goodbye to complicated website builders.  HTML Jig simplifies the process with its intuitive AI-powered interface.</li>
-      <li>Customizable Templates:  Choose from a variety of professionally designed templates that can be tailored to your brand and style.</li>
-      <li>Free to Use: Get started building your website for free.  Our free plan provides you with all the essential tools to bring your vision to life.</li>
+      <li><b>Criação Rápida com IA:</b> Gere páginas completas em poucos segundos com a tecnologia NVIDIA AI.</li>
+      <li><b>Organização Automática:</b> Suas páginas geradas ficam salvas na pasta <b>criações</b>.</li>
+      <li><b>Templates Personalizáveis:</b> Escolha entre dezenas de modelos visuais W3.CSS.</li>
     </ul>
     <img src="ai.webp" style="width:100%;max-width:1000px" class="w3-margin-top">
   </div>
-  <!-- Get Started Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="getstarted">
 
-    <h2>Get Started with HTML Jig</h2>
+  <!-- How to Use Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="instructions">
+    <h2>Como Utilizar o Sistema</h2>
     <hr class="w3-opacity">
 
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding-16 w3-center w3-light-grey w3-round">
+          <h3 class="w3-text-deep-purple">1. Acesse o Jig</h3>
+          <p>Clique no link <a href="jig.html" class="w3-text-deep-purple"><b>jig.html</b></a> para abrir o formulário de criação.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding-16 w3-center w3-light-grey w3-round">
+          <h3 class="w3-text-deep-purple">2. Preencha os Dados</h3>
+          <p>Informe o nome do arquivo, título, descrição da empresa e escolha um template visual.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding-16 w3-center w3-light-grey w3-round">
+          <h3 class="w3-text-deep-purple">3. Gere seu Site</h3>
+          <p>Clique em <b>Criar</b> e a IA salvará sua página na pasta <b>criações</b>!</p>
+        </div>
+      </div>
+    </div>
 
-<h3>What do you need to know</h3>
-        <p>This project was made to work with Google Firebase.</p>
-        <p>You need to have Node JS and Firebase Tools installed on your local hardware. This can be a computer, tablet or smartphone.</p>
-        <p>Remember to create a project with a web application and log in to Firebase Tools before performing the procedures below.</p>
-
-<hr class="w3-opacity">
-
-
-<h4>If you're new to Google Firebase, start here:</h4>
-<ol>
-<li><b>Install NodeJS from</b>
-<pre> <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></pre>
-</li>
-<li><b>Install Google Firebase Tools</b>
-<pre>npm install -g firebase-tools</pre>
-</li>
-<li><b>Log in</b>
-<pre>firebase login</pre>
-</li>
-<li><b>Create a Firebase project</b>
-<pre>firebase init</pre>
-</li>
-</ol>
-
-
-
-<hr class="w3-opacity">
-
-    <h4>Then, follow these simple steps to create your website with HTML Jig:</h4>
+    <h4>Passo a passo detalhado:</h4>
     <ol>
-      <li><b>Clone the repository:</b> 
-        <pre style='overflow-x:auto;'>git clone https://github.com/pwasystem/htmljig.git</pre>
-      </li>
-      <li><b>Rename the HTMLjig folder:</b>  Change the folder name to your Firebase project name.</li>
-      <li><b>Modify .firebaserc:</b>  Update the project name in the .firebaserc file:
-        <pre>
-{
-  "projects": {
-    "default": "your_project_name"
-  }
-}
-        </pre>
-      </li>
-      <li><b>Configure .env:</b>  Replace <b>(your_gemini_api_key)</b> with your actual Gemini API key in the functions/.env file:
-        <pre>
-GEMINIKEY=<b>(your_gemini_api_key)</b>
-        </pre>
-      </li>
-      <li><b>Update action attribute:</b>  Modify the action value in the form of public/jig.html to:
-        <pre style='overflow-x:auto;'>
-action='http://127.0.0.1:5001/<b>(your_project_name)</b>/us-central1/jig'
-        </pre>
-      </li>
-      <li><b>Install dependencies:</b> Run <b>npm install</b> in the functions directory.</li>
-      <li><b>Start Firebase emulator:</b>  Run <b>firebase emulators:start</b>.</li>
-      <li><b>Access your website:</b> Open <b>http://127.0.0.1:5000/jig.html</b> in your browser.</li>
-      <li><b>Fill in the form:</b>
+      <li><b>Acesse a ferramenta:</b> Clique no botão <a href="jig.html"><b>Criar Site Agora</b></a> ou navegue para <code>/jig.html</code>.</li>
+      <li><b>Preencha os campos do formulário:</b>
         <ul>
-          <li><b>File name:</b>  Name for your HTML file.</li>
-          <li><b>Title:</b>  Title of your website or company.</li>
-          <li><b>Description:</b> Information about your website, preferred colors, and desired content.</li>
-          <li><b>Template:</b> Select a model to use as a template.</li>
-          <li><b>Images:</b> Provide links to your images.</li>
+          <li><b>Nome do arquivo (File Name):</b> Nome que a página terá (ex: <code>minha-loja</code>).</li>
+          <li><b>Título (Title):</b> Título da empresa ou projeto (ex: <code>Café Gourmet</code>).</li>
+          <li><b>Descrição (Description):</b> Detalhes sobre a empresa, produtos, esquema de cores e estilo desejado.</li>
+          <li><b>Template:</b> Selecione a estrutura visual desejada (ex: <i>Website, Cafe, Band, Portfólio</i>).</li>
+          <li><b>Imagens (opcional):</b> Adicione URLs de fotos para a IA incluir na página.</li>
         </ul>
       </li>
-      <li><b>Click "Create":</b>  Wait for the AI to build your website.</li>
-      <li><b>View your site:</b>  Click on the link to see your creation.</li>
-      <li><b>Suggest changes:</b>  Use the description field to suggest improvements or publish your website with <b>firebase deploy --only hosting</b>.</li>
+      <li><b>Gerar a página:</b> Clique no botão <b>Criar</b> e aguarde o processamento da IA.</li>
+      <li><b>Visualizar o resultado:</b> Após a criação, um link direto para a página na pasta <b>criações</b> (`criacoes/seu-arquivo.html`) será exibido para você abrir o site em uma nova aba!</li>
+    </ol>
+
+    <div class="w3-center w3-margin-top">
+      <a href="jig.html" class="w3-button w3-deep-purple w3-large w3-round-large"><i class="fa fa-magic"></i> Ir para o Formulário do HTML Jig</a>
+    </div>
+  </div>
+
+  <!-- Get Started Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="getstarted">
+    <h2>Configuração do Servidor</h2>
+    <hr class="w3-opacity">
+    <p>O sistema roda localmente via <b>Node.js</b> integrado aos servidores de IA da <b>NVIDIA</b>.</p>
+    <ol>
+      <li>Execute <code>npm install</code> para instalar as dependências.</li>
+      <li>Verifique a chave da NVIDIA no arquivo <code>.env</code>.</li>
+      <li>Inicie o servidor com <code>npm start</code> e acesse <code>http://localhost:3000</code>.</li>
     </ol>
   </div>
 
